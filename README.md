@@ -72,9 +72,37 @@ o	Cathode (–) of LED: Connect to GND on the Arduino.
 1.	Stop Simulation: Click the “Stop Simulation” button once testing is complete.
    
 2.	Save the Circuit: Click “Save” at the top of the screen to store your design and code for future use.
+## CIRCUIT DIAGRAM 
+<img width="681" height="362" alt="image" src="https://github.com/user-attachments/assets/d7915f21-3ef1-4eeb-b422-e047c52bff3c" />
+
 
 ## PROGRAM
+```
+int buttonState = 0;
+void setup()
+{
+  pinMode(2, INPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+void loop()
+{
+  buttonState = digitalRead(2);
+  if (buttonState == HIGH)
+  {
+    digitalWrite(LED_BUILTIN, HIGH);
+  }
+  else
+  {
+    digitalWrite(LED_BUILTIN, LOW);
+  }
+  delay(10);
+}
+```
+
 ## OUTPUT 
+
+<img width="715" height="291" alt="image" src="https://github.com/user-attachments/assets/eb376002-e55d-4d75-8076-2b7266cd5d79" />
+<img width="703" height="381" alt="image" src="https://github.com/user-attachments/assets/261522a0-ed37-4b0c-be47-133b137b04cc" />
 
 
 ## Result:
